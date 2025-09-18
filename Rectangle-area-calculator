@@ -3,4 +3,4 @@ width = int(input("enter width of rectangle: "))
 
 
 area = length * width
-print(f"Area = {area}cm squared")
+print(area)
