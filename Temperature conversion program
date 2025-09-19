@@ -1,0 +1,40 @@
+#Temperature conversion program
+
+temp = float(input("Enter the temperature: "))
+unit = input("Enter the current unit (c, f, k): ").lower()
+conversion_unit = input("Enter the conversion unit (c, f, k): ").lower()
+
+
+#Celcius
+if unit == "c" and conversion_unit == "f":
+    print(f"Temp is {round((temp * 1.8) + 32, 2)} degrees Fahrenheit.")
+
+elif unit == "c" and conversion_unit == "k":
+    print(f"Temp is {round(temp + 273.15, 2)} degrees Kelvin.")
+
+elif unit == "c" and conversion_unit == "c":
+    print(f"Temp is {temp} degrees Celsius.")
+
+#Fahrenheit
+elif unit == "f" and conversion_unit == "c":
+    print(f"temp is {round((temp - 32) * 5/9, 2)} degrees Celsius.")
+
+elif unit == "f" and conversion_unit == "k":
+    print(f"temp is {round(5/9 * (temp + 459.67), 2)} degrees Kelvin.")
+
+elif unit == "f" and conversion_unit == "f":
+    print(f"temp is {temp} degrees Fahrenheit.")
+
+#Kelvin
+elif unit == "k" and conversion_unit == "c":
+    print(f"temp is {round(temp-273.15, 2)} degrees Celsius.")
+
+elif unit == "k" and conversion_unit == "f":
+    print(f"temp is {round((temp - 273.15) * 9/5 + 32, 2)} degrees Fahrenheit.")
+
+elif unit == "k" and conversion_unit == "k":
+    print(f"temp is {temp} degrees Kelvin.")
+
+
+else:
+    print(f"{unit} is an invalid unit")
